@@ -11,7 +11,6 @@ RSpec.describe PostsController do
   let(:article_found) { Post.find(@article.id) }
 
   before do
-      binding.pry
     @article = Post.create!(attributes)
   end
 
@@ -70,7 +69,6 @@ RSpec.describe PostsController do
       before { patch :update, bad_attributes }
 
       it "does not update" do
-          binding.pry
         expect(article_found.content).to_not eq("too short")
       end
 
