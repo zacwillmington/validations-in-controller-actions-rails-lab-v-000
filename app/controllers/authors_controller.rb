@@ -11,10 +11,8 @@ class AuthorsController < ApplicationController
     @author = Author.new(author_params)
     if @author.valid?
         @author.save
-        binding.pry
         redirect_to author_path(@author)
     else
-        binding.pry
         render :new
     end
 end
