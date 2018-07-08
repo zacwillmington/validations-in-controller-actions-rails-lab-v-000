@@ -11,7 +11,7 @@ class PostsController < ApplicationController
       binding.pry
       set_post!.update(post_params)
       binding.pry
-      if @post.valid?
+      if @post && @post.valid?
           binding.pry
           @post.save
           binding.pry
