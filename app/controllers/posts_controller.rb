@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   def update
       binding.pry
-      @post = Post.update!(post_params)
+      @post = Post.update(post_params)
       binding.pry
       if @post.valid?
           binding.pry
