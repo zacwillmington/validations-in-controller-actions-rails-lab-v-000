@@ -14,6 +14,7 @@ class PostsController < ApplicationController
       if @post.valid?
           binding.pry
           @post.save
+          binding.pry
           redirect_to post_path(@post)
       else
           binding.pry
