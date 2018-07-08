@@ -8,16 +8,11 @@ class PostsController < ApplicationController
   end
 
   def update
-      binding.pry
       set_post!.update(post_params)
-      binding.pry
       if @post && @post.valid?
-          binding.pry
           @post.save
-          binding.pry
           redirect_to post_path(@post)
       else
-          binding.pry
           render :edit
       end
   end
