@@ -9,7 +9,7 @@ class AuthorsController < ApplicationController
 
   def create
      binding.pry
-    @author = Author.create!(author_params)
+    @author = Author.new(author_params)
     binding.pry
     if @author
         redirect_to author_path(@author)
