@@ -11,6 +11,7 @@ RSpec.describe PostsController do
   let(:article_found) { Post.find(@article.id) }
 
   before do
+      binding.pry
     @article = Post.create!(attributes)
   end
 
